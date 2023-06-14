@@ -1,0 +1,64 @@
+
+.grid {
+    display: grid;
+}
+.galeria {
+    grid-gap: 15px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 400px 400px;
+    grid-template-areas: "four-img full-h-img"
+                         "full-w-img  full-h-img";
+}
+
+.four-img {
+    grid-area: four-img;
+    /* object-fit: cover; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.four-img img,
+.box-red {
+    /* background: red; */
+    width: 25%;
+    height: 100%;
+    object-fit: cover;    
+    padding-left: 5px;
+    padding-right: 5px;
+    flex: 0 0 25%;
+}
+
+.full-w-img {
+    grid-area: full-w-img;
+    /* background: green; */
+    padding-left: 5px;
+    padding-right: 5px;
+
+    
+}
+.full-w-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-h-img {
+    grid-area: full-h-img;
+    /* background: blue; */
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+.full-h-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-fluid {
+    /* width: 100%;
+    height: auto; */
+    object-fit: contain;
+    aspect-ratio: 1/1;
+} 
